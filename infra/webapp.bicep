@@ -10,11 +10,11 @@ resource appServicePlan 'Microsoft.Web/serverfarms@2022-09-01' = {
   properties: {
     reserved: true
   }
-  sku: {
-    name: 'B1'
-    tier: 'Basic'
+ sku: {
+    name: sku
+    tier: 'Standard'
     capacity: 1
-}
+  }
 }
 resource appService 'Microsoft.Web/sites@2022-09-01' = {
   name: webAppName
